@@ -11,7 +11,8 @@ Thomas Glasser
 }
 
 body {
-    background-color: #f6eee4;
+    background-color: #636564;
+    color: white;
 }
 
 img {
@@ -19,8 +20,11 @@ img {
     display: block;
 }
 
+header {
+    background-color: #1D0335;}
+
 nav {
-    background-color: #2a1f14;
+    background-color: #1D0335;
 
     ul {
         list-style-type: none;
@@ -35,7 +39,7 @@ nav {
 
             a {
                 display: block;
-                color: #f6eee4;
+                color: white;
                 padding: 0.5em 2em;
                 text-decoration: none;
             }
@@ -60,16 +64,18 @@ main {
     }
 
     .link {
-        color: #4d3319;
+        color: #68121B;
         text-decoration: none;
         font-weight: bold;
         font-style: italic;
     }
 
     .action {
-        font-size: 1.75em;
+        color: #1D0335;
+        font-size: 1.5em;
         font-weight: bold;
         text-align: center;
+        text-decoration: none;
     }
 
     #contact {
@@ -80,12 +86,12 @@ main {
 footer {
     text-align: center;
     font-size: 0.85em;
-    background-color: #2a1f14;
-    color: #f6eee4;
+    background-color: #1D0335;
+    color: white;
     padding: 1% 0;
 
     a {
-        color: #f3e6d8;
+        color: white;
         text-decoration: none;
     }
 }
