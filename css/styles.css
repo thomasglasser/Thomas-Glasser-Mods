@@ -4,7 +4,7 @@ Thomas Glasser
 */
 
 /* CSS Reset */
-* {
+body, header, nav, footer, main, h1, div, img, ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,67 +20,123 @@ img {
     display: block;
 }
 
+/* Style rules for mobile */
+.mobile {
+    display: block;
+}
+
+.mobile h1 {
+    text-align: center;
+    padding: 2%;
+}
+
+.mobile h1 .emblema-one-regular {
+    font-family: "Emblema One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mobile h3 {
+    text-align: center;
+    padding: 2%;
+}
+
+.mobile h3 .lora-regular {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Style rules to show mobile and hide tab-desk */
+.tab-desk {
+    display: none;
+}
+
 header {
-    background-color: #1D0335;}
+    background-color: #1D0335;
+}
 
 nav {
     background-color: #1D0335;
+}
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        text-align: center;
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
 
-        li {
-            display: inline-block;
-            font-size: 1.5em;
-            font-family: Geneva, Arial, sans-serif;
-            font-weight: bold;
+nav ul li {
+    display: block;
+    font-size: 1.5em;
+    font-family: Geneva, Arial, sans-serif;
+    font-weight: bold;
+    border-top: 1px solid #f6eee4;
+}
 
-            a {
-                display: block;
-                color: white;
-                padding: 0.5em 2em;
-                text-decoration: none;
-            }
-        }
-    }
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 0.5em 2em;
+    text-decoration: none;
 }
 
 main {
     padding: 2%;
     font-family: Verdana, Arial, sans-serif;
+}
 
-    p {
-        font-size: 1.25em;
-    }
+main p {
+    font-size: 1.25em;
+}
 
-    h3 {
-        padding-top: 2%;
-    }
+main h3 {
+    padding-top: 2%;
+}
 
-    ul {
-        list-style-type: square;
-    }
+main ul {
+    list-style-type: square;
+}
 
-    .link {
-        color: #68121B;
-        text-decoration: none;
-        font-weight: bold;
-        font-style: italic;
-    }
+main .link {
+    color: #68121B;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
 
-    .action {
-        color: #1D0335;
-        font-size: 1.5em;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
-    }
+main .action {
+    color: #1D0335;
+    font-size: 1.75em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
 
-    #contact {
-        text-align: center;
-    }
+main .round {
+    border-radius: 6px;
+}
+
+main #info ul{
+    margin-left: 10%;
+}
+
+main #contact {
+    text-align: center;
+}
+
+main .discord-link {
+    background-color: #5757b9;
+    padding: 2%;
+    width: 80%;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+main .discord-link a {
+    color: #f6eee4;
+    padding: 2%;
+    width: 80%;
+    text-decoration: none;
 }
 
 footer {
@@ -89,9 +145,9 @@ footer {
     background-color: #1D0335;
     color: white;
     padding: 1% 0;
+}
 
-    a {
-        color: white;
-        text-decoration: none;
-    }
+footer a {
+    color: white;
+    text-decoration: none;
 }
