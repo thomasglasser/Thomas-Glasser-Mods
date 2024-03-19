@@ -4,7 +4,7 @@ Thomas Glasser
 */
 
 /* CSS Reset */
-body, header, nav, footer, main, h1, div, img, ul {
+body, header, nav, footer, main, h1, div, img, ul, section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -65,7 +65,7 @@ nav ul {
     text-align: center;
 }
 
-nav ul li {
+nav li {
     display: block;
     font-size: 1.5em;
     font-family: Geneva, Arial, sans-serif;
@@ -73,7 +73,7 @@ nav ul li {
     border-top: 1px solid #f6eee4;
 }
 
-nav ul li a {
+nav li a {
     display: block;
     color: white;
     padding: 0.5em 2em;
@@ -85,46 +85,47 @@ main {
     font-family: Verdana, Arial, sans-serif;
 }
 
-main p {
+p {
     font-size: 1.25em;
 }
 
-main h3 {
-    padding-top: 2%;
-}
-
-main ul {
+ul {
     list-style-type: square;
 }
 
-main .link {
+.link {
     color: #68121B;
     text-decoration: none;
     font-weight: bold;
     font-style: italic;
 }
 
-main .action {
+.action {
     color: #1D0335;
-    font-size: 1.75em;
+    font-size: 1.25em;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
 }
 
-main .round {
+.round {
     border-radius: 6px;
 }
 
-main #info ul{
+.logo {
+    max-height: 10%;
+    max-width: 10%;
+}
+
+#info ul {
     margin-left: 10%;
 }
 
-main #contact {
+#contact {
     text-align: center;
 }
 
-main .discord-link {
+.discord-link {
     background-color: #5757b9;
     padding: 2%;
     width: 80%;
@@ -132,7 +133,7 @@ main .discord-link {
     text-decoration: none;
 }
 
-main .discord-link a {
+.discord-link a {
     color: #f6eee4;
     padding: 2%;
     width: 80%;
@@ -150,4 +151,74 @@ footer {
 footer a {
     color: white;
     text-decoration: none;
+}
+
+/* Media query for tablet viewport */
+@media screen and (min-width: 620px) {
+    .tab-desk {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    nav {
+        padding: 1%;
+        margin-bottom: 1%;
+    }
+
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.25em;
+    }
+
+    nav li a {
+        padding: 0.5em;
+    }
+}
+
+/* Media query for desktop viewport */
+@media screen and (min-width: 1000px), print {
+    nav li {
+        font-size: 1.5em;
+    }
+
+    nav li a {
+        padding: 0.5em 1.5em;
+    }
+
+    nav li a:hover {
+        color: #1D0335;
+        background-color: #f6eee4;
+    }
+
+    #info ul {
+        margin-left: 5%;
+    }
+}
+
+/* Media query for large desktop viewport */
+@media screen and (min-width: 1921px) {
+    #wrapper {
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+/* Media query for print */
+@media print {
+    nav li a {
+        color: black;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    footer {
+        color: black;
+    }
 }
