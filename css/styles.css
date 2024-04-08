@@ -4,7 +4,7 @@ Thomas Glasser
 */
 
 /* CSS Reset */
-body, header, nav, footer, main, h1, div, img, ul, section, table, caption, aside, figure, figcaption {
+body, header, nav, footer, main, h1, div, img, ul, section, table, caption, aside, figure, figcaption, td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -49,6 +49,10 @@ img {
 
 /* Style rules to show mobile and hide tab-desk */
 .tablet-desktop {
+    display: none;
+}
+
+.desktop {
     display: none;
 }
 
@@ -146,7 +150,7 @@ caption {
     padding: 0.5em;
 }
 
-#contact {
+#contact, #form h2 {
     text-align: center;
 }
 
@@ -163,6 +167,35 @@ caption {
     padding: 2%;
     width: 80%;
     text-decoration: none;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+fieldset, input, textarea {
+    margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    padding-top: 2%;
+}
+
+#submit {
+    margin: 0 auto;
+    padding: 2%;
+    display: block;
+    background-color: #1D0335;
+    color: white;
+    font-size: 1.25em;
+    border-radius: 10px;
 }
 
 footer {
@@ -235,10 +268,23 @@ footer a {
         max-width: 50%;
         max-height: 50%;
     }
+
+    form {
+        margin: 0 auto;
+        width: 70%;
+    }
 }
 
 /* Media query for desktop viewport */
 @media screen and (min-width: 1000px), print {
+    .desktop {
+        display: block;
+    }
+
+    .mobile-tablet {
+        display: none;
+    }
+
     nav li {
         font-size: 1.5em;
     }
@@ -264,6 +310,52 @@ footer a {
     aside {
         grid-column: 1 / span 3;
         font-size: 2em;
+    }
+
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 0 auto;
+        table-layout: fixed;
+        width: 100%
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+
+    th {
+        border: 1px solid black;
+        padding: 1%;
+        background-color: #1D0335;
+        color: white;
+        font-size: 1.15em;
+    }
+
+    td {
+        border: 1px solid black;
+        padding: 1%;
+        word-wrap: break-word;
+    }
+
+    tr:nth-child(odd) {
+        background-color: gray;
+    }
+
+    form {
+        width: auto;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+
+    .btn {
+        grid-column: 1 / span 2;
     }
 }
 
