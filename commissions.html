@@ -19,12 +19,22 @@ Last updated: 1/29/2024
     </head>
     <body>
         <div id="wrapper">
-            <!-- Logo and title -->
-            <header>
+            <nav class="mobile-nav">
+                <div id="nav-links">
+                    <a href="index.html" class="round">Home</a>
+                    <a href="about.html" class="round">About Me</a>
+                    <a href="mods.html" class="round">Mods</a>
+                    <a href="commissions.html" class="round">Commissions</a>
+                    <a href="contact.html" class="round">Contact</a>
+                </div>
+                <a class="nav-icon" onclick="hamburger()">
+                    <div>&#9776;</div>
+                </a>
+            </nav>
+            <header id="header">
                 <a href="index.html"><img src="images/banner.png" alt="Thomas Glasser Mods Banner"></a>
             </header>
-            <!-- Page List -->
-            <nav>
+            <nav class="tablet-desktop">
                 <ul>
                     <li><a href="index.html" class="round">Home</a></li>
                     <li><a href="about.html" class="round">About Me</a></li>
@@ -36,17 +46,33 @@ Last updated: 1/29/2024
             <main>
                 <div id="info">
                     <p>
-                        I currently offer commissions for 1.20-1.20.1 Forge, 1.20.4+ NeoForge, and 1.20+ Fabric and Quilt.
+                        I currently offer commissions for NeoForge, Fabric, and Quilt.
                         I can also develop multiloader mods that work on all three platforms.
-                    </p>
-                    <p>
-                        Though these are some things I have done in the past, I am always open to learning new things.
-                        If you have a request not listed here, feel free to <a href="contact.html" class="link">contact me.</a>
                     </p>
                 </div>
 
+                <div id="faq">
+                    <div id="questions">
+                        <h2>Frequently Asked Questions:</h2>
+                        <p onclick="getAnswer('cost')">What will it cost to make a mod?</p>
+                        <p onclick="getAnswer('time')">How long will it take to make a mod?</p>
+                        <p onclick="getAnswer('versions')">What versions of Minecraft do you support?</p>
+                        <p onclick="getAnswer('updates')">Will you update the mod after it's made?</p>
+                    </div>
+                    <div id="answer">
+                        <h2>Answer:</h2>
+                        <p></p>
+                    </div>
+                </div>
+
+
                 <div class="mobile-tablet" id="summary">
                     <h3>Things I Can Do</h3>
+                    <p>
+                        Though these are some things I have done in the past, I am always open to learning new things.
+                        If you have a request not listed here,
+                        feel free to <a href="contact.html" class="link">contact me.</a>
+                    </p>
                     <p>Items</p>
                     <p>Blocks</p>
                     <p>Entities</p>
@@ -71,6 +97,11 @@ Last updated: 1/29/2024
                 <div class="desktop" id="details">
                     <table>
                         <caption>Things I Can Do</caption>
+                        <caption>
+                            Though these are some things I have done in the past, I am always open to learning new things.
+                            If you have a request not listed here,
+                            feel free to <a href="contact.html" class="link">contact me.</a>
+                        </caption>
                         <tr>
                             <th>Element</th>
                             <th>Details</th>
@@ -212,5 +243,6 @@ Last updated: 1/29/2024
                 <p> <a href="mailto:thomas@thomasglasser.dev" class="link">thomas@thomasglasser.dev</a> </p>
             </footer>
         </div>
+        <script src="scripts/script.js"></script>
     </body>
 </html>

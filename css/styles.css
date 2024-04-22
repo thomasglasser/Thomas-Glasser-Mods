@@ -5,9 +5,9 @@ Thomas Glasser
 
 /* CSS Reset */
 body, header, nav, footer, main, h1, div, img, ul, section, table, caption, aside, figure, figcaption, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 body {
@@ -28,6 +28,7 @@ img {
 .mobile h1 {
     text-align: center;
     padding: 2%;
+    margin: 2% 0 0 3%;
 }
 
 .mobile h1 .emblema-one-regular {
@@ -57,31 +58,51 @@ img {
 }
 
 header {
+    top: 20px;
     background-color: #1D0335;
+    padding: 5% 0 0 0;
+}
+
+header img {
+    margin: 0 auto;
 }
 
 nav {
     background-color: #1D0335;
-}
-
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-nav li {
-    display: block;
-    font-size: 1.5em;
     font-family: Geneva, Arial, sans-serif;
     font-weight: bold;
-    border-top: 1px solid #f6eee4;
 }
 
-nav li a {
-    display: block;
+.mobile-nav a {
     color: white;
-    padding: 0.5em 2em;
+    text-align: center;
+    font-size: 2em;
     text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+
+.mobile-nav a.nav-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-icon div {
+    height: 40px;
+    width: 40px;
+    color: #68121B;
+}
+
+.mobile-nav {
+    display: block;
+}
+
+#nav-links {
+    display: none;
 }
 
 main {
@@ -114,6 +135,21 @@ ul {
 
 .round {
     border-radius: 6px;
+}
+
+#questions p {
+    cursor: pointer;
+}
+
+#answer {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#answer h2 {
+    display: none;
+    font-weight: bold;
 }
 
 aside {
@@ -221,9 +257,19 @@ footer a {
         display: none;
     }
 
+    header {
+        top: 0;
+        padding: 0;
+    }
+
     nav {
         padding: 1%;
         margin-bottom: 1%;
+    }
+
+    nav ul {
+        list-style-type: none;
+        text-align: center;
     }
 
     nav li {
@@ -233,7 +279,14 @@ footer a {
     }
 
     nav li a {
-        padding: 0.5em;
+        display: block;
+        color: white;
+        padding: 0.5em 2em;
+        text-decoration: none;
+    }
+
+    .mobile-nav {
+        display: none;
     }
 
     .grid {
